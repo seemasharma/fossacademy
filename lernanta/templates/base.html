@@ -12,8 +12,7 @@
   <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
   <meta charset="utf-8">
   <!--[if IE]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
-
-  <title>P2PU | {% block title %}{% endblock %}</title>
+  <title>Foss Academy | {% block title %}{% endblock %}</title>
   <meta name="description" content="{% block description %}{{ _('Learning for everyone, by everyone, about almost anything.') }}{% endblock %}">
   <meta name="author" content="mozilla">
 
@@ -68,9 +67,9 @@
           
     {% if user.is_authenticated %}
             <ul class="nav pull-right">
-              <li ><a class="right-link-1" href="http://info.p2pu.org/about" target="_blank">{{ _('About') }}</a></li>
-              <li ><a class="right-link-2" href="http://info.p2pu.org" target="_blank">{{ _('Blog') }}</a></li>
-              <li><a class="right-link-2" href="http://help.p2pu.org" id="help-link" target="_blank">{{ _('Help') }}</a></li>              
+              <li ><a class="right-link-1" href="pages/aboutus/" target="_blank">{{ _('About') }}</a></li>
+              <li ><a class="right-link-2" href="#" target="_blank">{{ _('Blog') }}</a></li>
+              <li><a class="right-link-2" href="#" id="help-link" target="_blank">{{ _('Help') }}</a></li>              
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   {% if user.get_profile %}
@@ -100,9 +99,9 @@
             </ul>	
           {% else %} {# user not logged in #}
             <ul class="nav pull-right">
-              <li ><a class="right-link-1" href="http://info.p2pu.org/about" target="_blank">{{ _('About') }}</a></li>
-              <li ><a class="right-link-2" href="http://info.p2pu.org" target="_blank">{{ _('Blog') }}</a></li>
-              <li><a class="right-link-2" href="http://help.p2pu.org" id="help-link" target="_blank">{{ _('Help') }}</a></li>
+              <li ><a class="right-link-1" href="pages/aboutus/" target="_blank">{{ _('About') }}</a></li>
+              <li ><a class="right-link-2" href="#" target="_blank">{{ _('Blog') }}</a></li>
+              <li><a class="right-link-2" href="#" id="help-link" target="_blank">{{ _('Help') }}</a></li>
               <li class="divider-vertical right-divider"></li>
               <li><a class="right-link-3" href="{{ login_with_redirect_url }}">{{ _('Login') }}</a></li>
             </ul>	
