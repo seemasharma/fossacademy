@@ -67,7 +67,7 @@
           
     {% if user.is_authenticated %}
             <ul class="nav pull-right">
-              <li ><a class="right-link-1" href="pages/aboutus/" target="_blank">{{ _('About') }}</a></li>
+              <li ><a class="right-link-1" href="/pages/aboutus/" target="_blank">{{ _('About') }}</a></li>
               <li ><a class="right-link-2" href="#" target="_blank">{{ _('Blog') }}</a></li>
               <li><a class="right-link-2" href="#" id="help-link" target="_blank">{{ _('Help') }}</a></li>              
               <li class="dropdown">
@@ -99,7 +99,7 @@
             </ul>	
           {% else %} {# user not logged in #}
             <ul class="nav pull-right">
-              <li ><a class="right-link-1" href="pages/aboutus/" target="_blank">{{ _('About') }}</a></li>
+              <li ><a class="right-link-1" href="/pages/aboutus/" target="_blank">{{ _('About') }}</a></li>
               <li ><a class="right-link-2" href="#" target="_blank">{{ _('Blog') }}</a></li>
               <li><a class="right-link-2" href="#" id="help-link" target="_blank">{{ _('Help') }}</a></li>
               <li class="divider-vertical right-divider"></li>
