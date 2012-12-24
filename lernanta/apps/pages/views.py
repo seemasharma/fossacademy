@@ -29,3 +29,7 @@ def jobs_page(request):
     raise http.Http404
     return render_to_response('pages/jobs_page.html', {},
         context_instance=RequestContext(request))
+
+def about_page(request):
+    return render_to_response('pages/about.html', {},
+        context_instance=RequestContext(request))
