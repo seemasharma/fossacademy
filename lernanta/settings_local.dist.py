@@ -327,6 +327,14 @@ SSO_EXTERNAL_REDIRECTS = {
 STATSD_HOST = 'stats.p2pu.org'
 STATSD_PORT = 8125
 
+# Where the default image for sending to Gravatar
+DEFAULT_PROFILE_IMAGE = '/static/images/member-missing.png'
+
+# When set to True, if the request URL does not match any
+# of the patterns in the URLconf and it doesn't end in a slash,
+# an HTTP redirect is issued to the same URL with a slash appended.
+APPEND_SLASH = True
+
 
 # SuperFeedr settings                                                                                                                                                                           
 SUPERFEEDR_URL = 'http://superfeedr.com/hubbub'
@@ -343,6 +351,24 @@ FEED_URLS = {
 }
 
 
+
+AUTHENTICATION_BACKENDS = (
+    'users.backends.DrupalUserBackend',
+    'users.backends.DrupalOpenIDBackend',
+    'users.backends.CustomUserBackend',
+    'django_openid_auth.auth.OpenIDBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+AUTH_PROFILE_MODULE = 'users.UserProfile'
+
+MAX_IMAGE_SIZE = 1024 * 700
+MAX_UPLOAD_SIZE = 1024 * 1024 * 50
+MAX_PROJECT_FILES = 6
+
+CACHE_BACKEND = 'caching.backends.memcached://localhost:11211'
+CACHE_PREFIX = 'lernanta'
+CACHE_COUNT_TIMEOUT = 60
 
 # Ckeditor                                                                                                                                                                                      
 CKEDITOR_MEDIA_PREFIX = "/static/ckeditor/"
