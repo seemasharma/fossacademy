@@ -327,6 +327,14 @@ SSO_EXTERNAL_REDIRECTS = {
 STATSD_HOST = 'stats.p2pu.org'
 STATSD_PORT = 8125
 
+# Where the default image for sending to Gravatar
+DEFAULT_PROFILE_IMAGE = '/static/images/member-missing.png'
+
+# When set to True, if the request URL does not match any
+# of the patterns in the URLconf and it doesn't end in a slash,
+# an HTTP redirect is issued to the same URL with a slash appended.
+APPEND_SLASH = True
+
 
 # SuperFeedr settings                                                                                                                                                                           
 SUPERFEEDR_URL = 'http://superfeedr.com/hubbub'
