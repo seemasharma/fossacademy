@@ -26,7 +26,7 @@
 			  <hr />
 	      <li><a href="http://twitter.com/fossacademy1" target="_blank">{{ _('Twitter') }}<img src="{{ STATIC_URL }}images/twitter-new.png" width="19px" height="16px" alt="T" /></a></li>
 			  <hr />
-		      <li><a href="https://github.com/satyaakam/fossacademy" target="_blank">{{ _('Get Involved') }}</a></li>
+		      <li><a href="https://github.com/fossacademy/fossacademy" target="_blank">{{ _('Get Involved') }}</a></li>
 			  <hr />
               <!-- <li><a href="http://info.p2pu.org/" target="_blank">{{ _('Blog') }}</a></li> -->
 	      <!-- 		  <hr /> -->
@@ -61,7 +61,7 @@
 		              <ul>
                         <li><a href="/es/">Español</a></li>
                         <li><a href="/sv/">Svenska</a></li>
-                        <li><a href="https://github.com/p2pu/lernanta/wiki/Translating-Lernanta">{{ _('(more)') }}</a></li>
+                       <!-- <li><a href="https://github.com/p2pu/lernanta/wiki/Translating-Lernanta">{{ _('(more)') }}</a></li>-->
 		              </ul>
 					</td>
 				  </tr>
@@ -73,10 +73,10 @@
 			<div class="info-links-box">
 	          <ul>
 	            <li><a href=#><span>{{ _('Help') }}</span></a></li>
-	            <li><a href=# target="_blank">{{ _('About') }} Foss Academy</a></li>
+	            <li><a href="{% locale_url static_page_show 'aboutus' %}">{{ _('About') }} Foss Academy</a></li>
 	            <li><a href="https://groups.google.com/group/fossacademy" target="_blank">{{ _('Announcements') }}</a></li>
-	            <li><a href="https://github.com/satyaakam/fossacademy/wiki" target="_blank">{{ _('Wiki') }}</a></li>
-	            <li><a href="https://github.com/satyaakam/fossacademy/issues" target="_blank">{{ _('Found a Bug?') }}</a></li>
+	            <li><a href="https://github.com/fossacademy/fossacademy/wiki" target="_blank">{{ _('Wiki') }}</a></li>
+	            <li><a href="https://github.com/fossacademy/fossacademy/issues" target="_blank">{{ _('Found a Bug?') }}</a></li>
 	          </ul>
 			  <ul>
 			    <li><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license" target="_blank">{{ _('Creative Commons') }}</a></li>
