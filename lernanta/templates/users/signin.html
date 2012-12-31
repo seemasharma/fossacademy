@@ -9,33 +9,43 @@
   <article>
     <h1>{{ _('Sign In') }} <small>{{ _('or') }} <a href="{% locale_url users_register %}{% if redirect_field_value %}?{{ redirect_field_name }}={{ redirect_field_value }}{% endif %}" tabindex="7">{{ _('create an account') }}</a></small></h1>
     <fieldset>
+      <table>
+	<tr><td style="padding: 10px;">
         <form action="{% locale_url users_login %}" method="post">
         {% csrf_token %}
-        <div class="field{% if form.username.errors %} error{% endif %}">
-          <label for="id_username">{{ _('Username or Email') }}</label>
-          {{ form.username }}
-          {{ form.username.errors }}
-        </div>
-        <div class="field{% if form.password.errors %} error{% endif %}">
-          <label for="id_password">{{ _('Password') }} <small class="hint">(<a href="{% locale_url users_forgot_password %}" tabindex="6">{{ _('Forgot your password?') }}</a>)</small></label>
-          {{ form.password }}
-          {{ form.password.errors }}          
-        </div>
-        <div class="field inline_label{% if form.remember_me.errors %} error{% endif %}">
-          <label for="id_remember_me">
-          {{ form.remember_me }}
-          {{ form.remember_me.errors }}
-          {{ _('Remember Me') }}
-          </label>
-        </div>        
-        <p class="submit">
-          <button id="login-submit-button" class="btn btn-olive" type="submit" tabindex="4">{{ _('Sign In') }}</button>
-          <a class="btn" href="{% locale_url splash %}" tabindex="5">{{ _('Cancel')}}</a>        
-
-          {{ _('or use') }}
-          <a class="openid" href="{% locale_url users_login_openid %}" tabindex="5">{{ _('OpenID')}}</a>
-        </p>
-      </form>      
+          <div class="field{% if form.username.errors %} error{% endif %}">
+            <label for="id_username">{{ _('Username or Email') }}</label>
+            {{ form.username }}
+            {{ form.username.errors }}
+          </div>
+          <div class="field{% if form.password.errors %} error{% endif %}">
+            <label for="id_password">{{ _('Password') }} <small class="hint">(<a href="{% locale_url users_forgot_password %}" tabindex="6">{{ _('Forgot your password?') }}</a>)</small></label>
+            {{ form.password }}
+            {{ form.password.errors }}          
+          </div>
+          <div class="field inline_label{% if form.remember_me.errors %} error{% endif %}">
+            <label for="id_remember_me">
+              {{ form.remember_me }}
+              {{ form.remember_me.errors }}
+              {{ _('Remember Me') }}
+            </label>
+          </div>       
+            <p class="submit">
+              <button id="login-submit-button" class="btn btn-olive" type="submit" tabindex="4">{{ _('Sign In') }}</button>
+              <a class="btn" href="{% locale_url splash %}" tabindex="5">{{ _('Cancel')}}</a>
+	      </p>
+              <td style="border-left: 3px solid ; padding: 10px;">
+		  {{ _('Use OpenID') }}
+		  <!-- <a class="openid" href="{% locale_url users_login_openid %}" tabindex="5">{{ _('OpenID')}}</a> -->
+		  <BR>
+		  <ul>
+		  <li><a href="{% url socialauth_begin "twitter" %}">Twitter</a></li>
+		  <li><a href="{% url socialauth_begin "google" %}">Google</a></li>
+		  <li><a href="{% url socialauth_begin "facebook" %}">Facebook</a></li>
+		  <li><a href="{% url socialauth_begin "Yahoo" %}">Yahoo</a></li>
+		  </ul>
+	</form>
+      </tr></table>      
     </fieldset>
   </article>
 </section>
