@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls.defaults import patterns, url, include
 from django.contrib.auth.views import password_reset
 from users.decorators import anonymous_only
 
@@ -108,4 +108,8 @@ urlpatterns = patterns('',
       name='preferences_delete'),
   url(r'^profile/create/$', 'users.views.profile_create',
       name='users_profile_create'),
+
+  url(r'', include('social_auth.urls')),
+
 )
+
