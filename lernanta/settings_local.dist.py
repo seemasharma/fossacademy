@@ -234,6 +234,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'users.context_processors.messages',
     'users.context_processors.redirect_urls',
     'django.core.context_processors.request',
+    #django-social-auth context processor
     'social_auth.context_processors.social_auth_by_name_backends',
     'social_auth.context_processors.social_auth_backends',
     'social_auth.context_processors.social_auth_by_type_backends',
@@ -362,7 +363,7 @@ AUTHENTICATION_BACKENDS = (
     'users.backends.CustomUserBackend',
     'django_openid_auth.auth.OpenIDBackend',
     'django.contrib.auth.backends.ModelBackend',
-     'social_auth.backends.twitter.TwitterBackend',
+    'social_auth.backends.twitter.TwitterBackend',
     'social_auth.backends.facebook.FacebookBackend',
     'social_auth.backends.google.GoogleOAuthBackend',
     'social_auth.backends.google.GoogleOAuth2Backend',
@@ -418,7 +419,7 @@ TRACKING_PREFIXES = [
 
 
 # social-auth-keys
-# please generate key and add 
+# please add following key duiring setup 
 TWITTER_CONSUMER_KEY         = ''
 TWITTER_CONSUMER_SECRET      = ''
 FACEBOOK_APP_ID              = ''
